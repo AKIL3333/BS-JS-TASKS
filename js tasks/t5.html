@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <title>TASK 5</title>
+    <style>
+    
+    </style>
+    <body>
+       <form>
+            <label>
+                Name:
+                <input type="text" id="Name">
+            </label>
+            <span id="nameerror"></span>
+            <br>
+            <label>
+                Email:
+                <input type="email" id="mail">
+            </label>
+            <span id="mailerror"></span>
+            <br>
+            <label>
+                Website:
+                <input type="url" id="Website">
+            </label>
+            <span id="websiteerror"></span>
+            <br>
+            <label>
+                Message:
+                
+            </label>
+            <textarea rows="5" cols="10" id="Message"></textarea>
+            <span id="Messageerror"></span>
+            <br>
+            <button onclick="validate(event)">Submit</button>
+        </form>
+    </body>
+    <script>
+        function validate(event){
+            let validity=true;
+            document.getElementById("nameerror").innerHTML = "";
+            document.getElementById("mailerror").innerHTML = "";
+            document.getElementById("websiteerror").innerHTML = "";
+            document.getElementById("Messageerror").innerHTML = "";
+
+            if(!document.getElementById("Name").value){
+                document.getElementById("nameerror").innerHTML="This field is required";
+                document.getElementById("nameerror").style.color="red";
+                document.getElementById("Name").style.borderColor="red";
+                validity=false;
+            }
+            else{
+                 document.getElementById("nameerror").innerHTML="";
+                 document.getElementById("Name").style.borderColor="";
+            }
+            if(!document.getElementById("mail").value){
+                document.getElementById("mailerror").innerHTML="This field is required";
+                document.getElementById("mailerror").style.color="red";
+                document.getElementById("mail").style.borderColor="red";
+                validity=false;
+            }
+            else if(!document.getElementById("mail").checkValidity()){
+                document.getElementById("mailerror").innerHTML="Enter valid Email.";
+                document.getElementById("mailerror").style.color="red";
+                document.getElementById("mail").style.borderColor="red";
+                validity=false;
+            }
+            else{
+                 document.getElementById("mailerror").innerHTML="";
+                 document.getElementById("mail").style.borderColor="";
+            }
+            if(!document.getElementById("Website").value){
+                document.getElementById("websiteerror").innerHTML="This field is required";
+                document.getElementById("websiteerror").style.color="red";
+                document.getElementById("Website").style.borderColor="red";
+                validity=false;
+            }
+            else if(!document.getElementById("Website").checkValidity()){
+                document.getElementById("websiteerror").innerHTML="Enter valid URL.";
+                document.getElementById("websiteerror").style.color="red";
+                document.getElementById("Website").style.borderColor="red";
+                validity=false;
+            }
+            else{
+                 document.getElementById("websiteerror").innerHTML="";
+                 document.getElementById("Website").style.borderColor="";
+            }
+            if(!document.getElementById("Message").value){
+                document.getElementById("Messageerror").innerHTML="This field is required";
+                document.getElementById("Messageerror").style.color="red";
+                document.getElementById("Message").style.borderColor="red";
+                validity=false;
+            }
+            else{
+                 document.getElementById("Messageerror").innerHTML="";
+                 document.getElementById("Message").style.borderColor="";
+            }
+            if(validity){
+                alert("Form submitted");
+                event.preventDefault();
+            }
+            event.preventDefault();
+        }
+    </script>
+</html>

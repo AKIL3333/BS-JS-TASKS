@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Form</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .form-container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa; /* Gray background */
+      border-radius: 10px;
+    }
+    .form-group {
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .form-group label {
+      width: 150px;
+      margin-right: 10px;
+      text-align: right;
+    }
+    .form-group i {
+      position: absolute;
+      right: 10px;
+      color: red;
+    }
+    .form-group input {
+      flex-grow: 1;
+      padding-right: 30px;
+    }
+    .form-text {
+      color: red; /* Red color for help text */
+      display: block;
+      margin-left: 160px; /* Align with input fields */
+    }
+    label{
+        color:red
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form>
+      <div class="form-group position-relative">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your first name</small>
+
+      <div class="form-group position-relative">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your last name</small>
+
+      <div class="form-group position-relative">
+        <label for="email">E-Mail</label>
+        <input type="email" class="form-control" id="email" placeholder="E-Mail Address" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your email address</small>
+
+      <div class="form-group position-relative">
+        <label for="phone">Phone #</label>
+        <input type="tel" class="form-control" id="phone" placeholder="(845)555-1212" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your phone number</small>
+
+      <div class="form-group position-relative">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" placeholder="Address" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your street address</small>
+
+      <div class="form-group position-relative">
+        <label for="city">City</label>
+        <input type="text" class="form-control" id="city" placeholder="City" required>
+        <i class="fas fa-times"></i>
+      </div>
+      <small class="form-text">Please supply your city</small>
+
+     
+    </form>
+  </div>
+
+  
+</body>
+</html>
